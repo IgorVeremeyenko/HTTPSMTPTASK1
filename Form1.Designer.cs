@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxUrl = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Request = new System.Windows.Forms.Button();
+            this.groupBoxStatusCode = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxResponseBody = new System.Windows.Forms.GroupBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxStatusCode.SuspendLayout();
+            this.groupBoxResponseBody.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxUrl
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxUrl.Location = new System.Drawing.Point(38, 32);
+            this.textBoxUrl.Name = "textBoxUrl";
+            this.textBoxUrl.Size = new System.Drawing.Size(332, 20);
+            this.textBoxUrl.TabIndex = 0;
+            this.textBoxUrl.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -57,25 +57,26 @@
             this.label1.Text = "Введите URL";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // Request
             // 
-            this.button1.Location = new System.Drawing.Point(398, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Получить ответ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_ClickAsync);
+            this.Request.Location = new System.Drawing.Point(398, 28);
+            this.Request.Name = "Request";
+            this.Request.Size = new System.Drawing.Size(116, 23);
+            this.Request.TabIndex = 2;
+            this.Request.Text = "Получить ответ";
+            this.Request.UseVisualStyleBackColor = true;
+            this.Request.Click += new System.EventHandler(this.button1_ClickAsync);
             // 
-            // groupBox1
+            // groupBoxStatusCode
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(38, 85);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 61);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Код ответа";
+            this.groupBoxStatusCode.Controls.Add(this.label2);
+            this.groupBoxStatusCode.Location = new System.Drawing.Point(38, 85);
+            this.groupBoxStatusCode.Name = "groupBoxStatusCode";
+            this.groupBoxStatusCode.Size = new System.Drawing.Size(332, 61);
+            this.groupBoxStatusCode.TabIndex = 3;
+            this.groupBoxStatusCode.TabStop = false;
+            this.groupBoxStatusCode.Text = "Код ответа";
+            this.groupBoxStatusCode.Enter += new System.EventHandler(this.groupBoxStatusCode_Enter);
             // 
             // label2
             // 
@@ -85,18 +86,18 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 0;
             // 
-            // groupBox2
+            // groupBoxResponseBody
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxResponseBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.webBrowser1);
-            this.groupBox2.Location = new System.Drawing.Point(38, 163);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(750, 275);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Тело ответа";
+            this.groupBoxResponseBody.Controls.Add(this.webBrowser1);
+            this.groupBoxResponseBody.Location = new System.Drawing.Point(38, 163);
+            this.groupBoxResponseBody.Name = "groupBoxResponseBody";
+            this.groupBoxResponseBody.Size = new System.Drawing.Size(750, 275);
+            this.groupBoxResponseBody.TabIndex = 5;
+            this.groupBoxResponseBody.TabStop = false;
+            this.groupBoxResponseBody.Text = "Тело ответа";
             // 
             // webBrowser1
             // 
@@ -117,16 +118,16 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBoxResponseBody);
+            this.Controls.Add(this.groupBoxStatusCode);
+            this.Controls.Add(this.Request);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxUrl);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBoxStatusCode.ResumeLayout(false);
+            this.groupBoxStatusCode.PerformLayout();
+            this.groupBoxResponseBody.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,12 +135,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxUrl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Request;
+        private System.Windows.Forms.GroupBox groupBoxStatusCode;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxResponseBody;
         private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

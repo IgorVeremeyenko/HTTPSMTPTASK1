@@ -20,14 +20,14 @@ namespace HTTPSMTPTASK1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var url = textBox1.Text;          
+            var url = textBoxUrl.Text;          
             
 
         }
 
         private async void button1_ClickAsync(object sender, EventArgs e)
         {
-            var url = textBox1.Text;
+            var url = textBoxUrl.Text;
             if (url != string.Empty)
             {
                 try
@@ -55,6 +55,11 @@ namespace HTTPSMTPTASK1
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void groupBoxStatusCode_Enter(object sender, EventArgs e)
         {
 
         }
